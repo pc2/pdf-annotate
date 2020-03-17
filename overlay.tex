@@ -1,0 +1,34 @@
+\documentclass[11pt]{scrartcl}
+
+\usepackage[utf8]{inputenc}
+\usepackage[absolute,overlay]{textpos}
+\usepackage[final]{pdfpages}
+\usepackage[paperwidth=%%WIDTH%%pt,paperheight=%%HEIGHT%%pt]{geometry}
+\usepackage{hyperref}
+\usepackage{etoolbox}
+\usepackage{bookmark}
+
+\def\insertdoi{%%DOI%%}
+
+\begin{document}
+  \thispagestyle{empty}
+
+  \begin{textblock*}{\paperwidth}(0pt,20pt)
+    %\footnotesize
+    \centering
+
+      \textbf{--- Author's copy ---}
+
+  \end{textblock*}
+
+  \begin{textblock*}{\paperwidth}(0pt,\paperheight -25pt)
+    \footnotesize
+    \centering
+
+      Published in: \emph{%%PUBNAME%%}\\
+      \copyright{} %%COPYRIGHT%% %%YEAR%%\ifdefempty{\insertdoi}{}{, DOI: \href{https://dx.doi.org/\insertdoi}{\insertdoi}}
+
+  \end{textblock*}
+
+  \includepdf[pages=-,fitpaper]{%%FILENAME%%}
+\end{document}
