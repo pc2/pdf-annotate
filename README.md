@@ -4,7 +4,7 @@ Mark PDF files as author copies using an automatically generated overlay
 ## Requirements
 
 The following ruby gems need to be installed:
-* bibtex
+* bibtex-ruby
 * pdfinfo
 
 Furthermore, you need:

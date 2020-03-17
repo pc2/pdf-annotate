@@ -14,7 +14,7 @@ rescue LoadError => err
   $stderr.puts "ERROR: The following ruby gems are required: bibtex-ruby pdfinfo"
   $stderr.puts "Please try running the following command:"
   $stderr.puts
-  $stderr.puts "gem install bibtex pdfinfo"
+  $stderr.puts "gem install bibtex-ruby pdfinfo"
   $stderr.puts
   $stderr.puts "Original error message:"
   $stderr.puts err.to_s
